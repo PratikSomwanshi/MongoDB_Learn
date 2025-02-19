@@ -8,3 +8,21 @@
 4) db.users.dropDatabase()   -> delete selected database completely
 
 5) db.users.find()        ->  retrieve all documents from collection
+
+6) show collections    ->    retrieve all the collection from the db
+
+7) db.createCollection("products")
+	this creates a empty collection whose name is products
+
+8) db.createCollection("logs", { capped: true, size: 10000, max: 100, autoIndexId: true }) 
+	this creates a empty collection with following property:
+		capped - means it is capped collection which override the older value if size full
+		size - size for collection
+		max - max how many documents should be kept
+		autoIndexId - automatically add index to id
+
+9) db.logs.drop()
+	it will drop the collection name logs
+
+10) cls 
+     it clear the mongo console
