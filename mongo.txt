@@ -26,3 +26,49 @@
 
 10) cls 
      it clear the mongo console
+
+11) db.users.insertMany([
+    {
+        name: "fiber",
+        age: 25,
+    },
+    {
+        name: "silk",
+        age: 30,
+        gender: "male",
+    },
+    {
+        name: "cotton",
+    },
+]);
+
+	it inset bulk record to user collection
+
+12) db.users.findOne()
+	it will return very first document from collection
+
+12) db.users.find({ gender: "male" } )
+	it will fetch the document who have gender male
+
+13) db.users.find({ age: 25 }, { _id: 0, name: false } )
+ 	second arguments tells which field to keep and which not, this is called projecting field
+
+14) db.users.updateOne({ age: 25 }, {$set: { name: "sundar" }})
+	update the first occurrent of age: 25
+
+15) db.users.replaceOne(
+    { name: "sundar" },
+    {
+        name: "fiber",
+    }
+);
+
+	this completely override the existing document with new object
+
+16) db.users.deleteOne({})
+	delete first record in collection
+    db.users.deleteOne({name: "jetha"})
+	delete first occurrent of Jetha
+    db.users.deleteMany({})
+	delete all documents in collectins
+
