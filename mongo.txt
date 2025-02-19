@@ -1,0 +1,10 @@
+
+1) show dbs      ---------------->   show databases who has at least one document
+2) db         	 ---------------->   return currently selected db
+
+3) db.users.insertOne({name: "jetha", age: 28})     ->   insert data into users collection if not present then it will create users collection and then insert the data.
+
+
+4) db.users.dropDatabase()   -> delete selected database completely
+
+5) db.users.find()        ->  retrieve all documents from collection
